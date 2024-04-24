@@ -11,6 +11,10 @@
 		26556B582BD2DB7F00745DE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B572BD2DB7F00745DE0 /* ContentView.swift */; };
 		26556B5A2BD2DB8000745DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26556B592BD2DB8000745DE0 /* Assets.xcassets */; };
 		26556B5D2BD2DB8000745DE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26556B5C2BD2DB8000745DE0 /* Preview Assets.xcassets */; };
+		26556B662BD9BB7300745DE0 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B652BD9BB7300745DE0 /* SidebarView.swift */; };
+		26556B682BD9BBCB00745DE0 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B672BD9BBCB00745DE0 /* GameView.swift */; };
+		26556B6A2BD9C65600745DE0 /* LettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B692BD9C65600745DE0 /* LettersView.swift */; };
+		26556B6C2BD9C97200745DE0 /* GuessesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B6B2BD9C97200745DE0 /* GuessesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		26556B592BD2DB8000745DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26556B5C2BD2DB8000745DE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26556B5E2BD2DB8000745DE0 /* Snowman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snowman.entitlements; sourceTree = "<group>"; };
+		26556B652BD9BB7300745DE0 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		26556B672BD9BBCB00745DE0 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		26556B692BD9C65600745DE0 /* LettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersView.swift; sourceTree = "<group>"; };
+		26556B6B2BD9C97200745DE0 /* GuessesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +60,8 @@
 		26556B542BD2DB7F00745DE0 /* Snowman */ = {
 			isa = PBXGroup;
 			children = (
+				26556B642BD9BB1500745DE0 /* Views */,
 				26556B552BD2DB7F00745DE0 /* SnowmanApp.swift */,
-				26556B572BD2DB7F00745DE0 /* ContentView.swift */,
 				26556B592BD2DB8000745DE0 /* Assets.xcassets */,
 				26556B5E2BD2DB8000745DE0 /* Snowman.entitlements */,
 				26556B5B2BD2DB8000745DE0 /* Preview Content */,
@@ -67,6 +75,18 @@
 				26556B5C2BD2DB8000745DE0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26556B642BD9BB1500745DE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				26556B572BD2DB7F00745DE0 /* ContentView.swift */,
+				26556B672BD9BBCB00745DE0 /* GameView.swift */,
+				26556B652BD9BB7300745DE0 /* SidebarView.swift */,
+				26556B692BD9C65600745DE0 /* LettersView.swift */,
+				26556B6B2BD9C97200745DE0 /* GuessesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26556B6C2BD9C97200745DE0 /* GuessesView.swift in Sources */,
 				26556B582BD2DB7F00745DE0 /* ContentView.swift in Sources */,
+				26556B6A2BD9C65600745DE0 /* LettersView.swift in Sources */,
 				26556B562BD2DB7F00745DE0 /* SnowmanApp.swift in Sources */,
+				26556B682BD9BBCB00745DE0 /* GameView.swift in Sources */,
+				26556B662BD9BB7300745DE0 /* SidebarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +224,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,7 +281,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -284,6 +308,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sarah.Snowman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,6 +336,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sarah.Snowman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
