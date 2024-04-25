@@ -112,3 +112,21 @@ struct Game: Identifiable {
         return word.uppercased()
     }
 }
+
+extension Game {
+    static var sampleGames: [Game] {
+        var game1 = Game(id: 1)
+        game1.word = "SNOWMAN"
+        game1.gameStatus = .lost
+
+        var game2 = Game(id: 2)
+        game2.word = "FROST"
+        game2.gameStatus = .won
+
+        var game3 = Game(id: 3)
+        game3.word = "ANTARCTICA"
+        game3.gameStatus = .lost
+
+        return [game1, game2, game3]
+    }
+}

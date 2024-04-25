@@ -24,6 +24,7 @@
 		26556B7C2BDA1BA300745DE0 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B7B2BDA1BA300745DE0 /* StatsView.swift */; };
 		26556B7E2BDA1BD900745DE0 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B7D2BDA1BD900745DE0 /* GameStats.swift */; };
 		26556B802BDA1C0800745DE0 /* WordStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B7F2BDA1C0800745DE0 /* WordStats.swift */; };
+		26556B822BDA219A00745DE0 /* ChartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B812BDA219A00745DE0 /* ChartPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		26556B7B2BDA1BA300745DE0 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		26556B7D2BDA1BD900745DE0 /* GameStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
 		26556B7F2BDA1C0800745DE0 /* WordStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStats.swift; sourceTree = "<group>"; };
+		26556B812BDA219A00745DE0 /* ChartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				26556B762BD9FC3200745DE0 /* AppState.swift */,
+				26556B812BDA219A00745DE0 /* ChartPoint.swift */,
 				26556B702BD9D26200745DE0 /* Game.swift */,
 				26556B6D2BD9D18E00745DE0 /* GameStatus.swift */,
 				26556B722BD9D47300745DE0 /* Letter.swift */,
@@ -214,6 +217,7 @@
 				26556B562BD2DB7F00745DE0 /* SnowmanApp.swift in Sources */,
 				26556B682BD9BBCB00745DE0 /* GameView.swift in Sources */,
 				26556B7C2BDA1BA300745DE0 /* StatsView.swift in Sources */,
+				26556B822BDA219A00745DE0 /* ChartPoint.swift in Sources */,
 				26556B662BD9BB7300745DE0 /* SidebarView.swift in Sources */,
 				26556B712BD9D26200745DE0 /* Game.swift in Sources */,
 				26556B792BDA17AA00745DE0 /* SettingsView.swift in Sources */,
