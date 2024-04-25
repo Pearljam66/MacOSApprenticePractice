@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct GameView: View {
+    @State var game = Game()
 
     var body: some View {
         HStack {
-            Image("2")
+            Image("\(game.incorrectGuessCount)")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 230)
@@ -19,21 +20,23 @@ struct GameView: View {
 
             VStack(spacing: 30.0) {
                 Spacer()
-                Text("Enter a letter to guess the word")
+                Text(game.statusText)
                     .font(.title2)
 
-                LettersView()
+                LettersView(letters: game.letters)
 
                 Spacer()
 
                 Button("New Game") {
-                    print("Starting new game.")
+                    game = Game()
                 }
                 .keyboardShortcut(.defaultAction)
+                .opacity(game.gameStatus == .inProgress ? 0 : 1)
+                .disabled(game.gameStatus == .inProgress)
 
                 Spacer()
 
-                GuessesView()
+                GuessesView(game: $game)
             }
             .padding()
 

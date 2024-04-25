@@ -15,6 +15,10 @@
 		26556B682BD9BBCB00745DE0 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B672BD9BBCB00745DE0 /* GameView.swift */; };
 		26556B6A2BD9C65600745DE0 /* LettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B692BD9C65600745DE0 /* LettersView.swift */; };
 		26556B6C2BD9C97200745DE0 /* GuessesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B6B2BD9C97200745DE0 /* GuessesView.swift */; };
+		26556B6E2BD9D18E00745DE0 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B6D2BD9D18E00745DE0 /* GameStatus.swift */; };
+		26556B712BD9D26200745DE0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B702BD9D26200745DE0 /* Game.swift */; };
+		26556B732BD9D47300745DE0 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B722BD9D47300745DE0 /* Letter.swift */; };
+		26556B752BD9E72100745DE0 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26556B742BD9E72100745DE0 /* words.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		26556B672BD9BBCB00745DE0 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		26556B692BD9C65600745DE0 /* LettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersView.swift; sourceTree = "<group>"; };
 		26556B6B2BD9C97200745DE0 /* GuessesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessesView.swift; sourceTree = "<group>"; };
+		26556B6D2BD9D18E00745DE0 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
+		26556B702BD9D26200745DE0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		26556B722BD9D47300745DE0 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		26556B742BD9E72100745DE0 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		26556B542BD2DB7F00745DE0 /* Snowman */ = {
 			isa = PBXGroup;
 			children = (
+				26556B6F2BD9D24E00745DE0 /* Models */,
 				26556B642BD9BB1500745DE0 /* Views */,
 				26556B552BD2DB7F00745DE0 /* SnowmanApp.swift */,
 				26556B592BD2DB8000745DE0 /* Assets.xcassets */,
@@ -82,11 +91,22 @@
 			children = (
 				26556B572BD2DB7F00745DE0 /* ContentView.swift */,
 				26556B672BD9BBCB00745DE0 /* GameView.swift */,
-				26556B652BD9BB7300745DE0 /* SidebarView.swift */,
 				26556B692BD9C65600745DE0 /* LettersView.swift */,
+				26556B652BD9BB7300745DE0 /* SidebarView.swift */,
 				26556B6B2BD9C97200745DE0 /* GuessesView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		26556B6F2BD9D24E00745DE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				26556B702BD9D26200745DE0 /* Game.swift */,
+				26556B6D2BD9D18E00745DE0 /* GameStatus.swift */,
+				26556B722BD9D47300745DE0 /* Letter.swift */,
+				26556B742BD9E72100745DE0 /* words.txt */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26556B5D2BD2DB8000745DE0 /* Preview Assets.xcassets in Resources */,
+				26556B752BD9E72100745DE0 /* words.txt in Resources */,
 				26556B5A2BD2DB8000745DE0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,9 +183,12 @@
 				26556B6C2BD9C97200745DE0 /* GuessesView.swift in Sources */,
 				26556B582BD2DB7F00745DE0 /* ContentView.swift in Sources */,
 				26556B6A2BD9C65600745DE0 /* LettersView.swift in Sources */,
+				26556B732BD9D47300745DE0 /* Letter.swift in Sources */,
+				26556B6E2BD9D18E00745DE0 /* GameStatus.swift in Sources */,
 				26556B562BD2DB7F00745DE0 /* SnowmanApp.swift in Sources */,
 				26556B682BD9BBCB00745DE0 /* GameView.swift in Sources */,
 				26556B662BD9BB7300745DE0 /* SidebarView.swift in Sources */,
+				26556B712BD9D26200745DE0 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

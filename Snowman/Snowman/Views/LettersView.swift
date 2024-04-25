@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LettersView: View {
-    let word = ["S", "N", "O", "W", "M", "A", "N"]
+    let letters: [Letter]
 
     var body: some View {
         HStack {
-            ForEach(word, id: \.self) { letter in
-                Text(letter)
+            ForEach(letters) { letter in
+                Text(letter.char)
                     .font(.title)
                     .bold()
                     .frame(width: 20, height: 20)
@@ -28,5 +28,5 @@ struct LettersView: View {
     }
 }
 #Preview {
-    LettersView()
+    LettersView(letters: Game().letters)
 }
