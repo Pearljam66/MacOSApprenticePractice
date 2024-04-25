@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Game {
+struct Game: Identifiable {
+    let id: Int
+
     var incorrectGuessCount = 0
     var statusText = "Enter a letter to start the game."
     var word = "SNOWMAN"
@@ -34,7 +36,15 @@ struct Game {
         return lettersArray
     }
 
-    init() {
+    var sidebarWord: String {
+        if gameStatus == .inProgress {
+            return "???"
+        }
+        return word
+    }
+
+    init(id: Int) {
+        self.id = id
         word = getRandomWord()
     }
 

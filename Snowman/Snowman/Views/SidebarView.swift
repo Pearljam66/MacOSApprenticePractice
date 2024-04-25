@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct SidebarView: View {
+    @ObservedObject var appState: AppState
+
     var body: some View {
-        Text("Games will be listed here")
+        List(appState.games, selection: $appState.selectedID) { game in
+            VStack(alignment: .leading) {
+                Text("Game \(game.id)")
+                    .font(.title3)
+                Text(game.sidebarWord)
+                game.gameStatus.displayStatus
+            }
+            .padding(.vertical)
+            .foregroundColor(game.gameStatus.statusTextColor)
+            .tag(game.id)
+        }
     }
 }
 
 #Preview {
-    SidebarView()
+    SidebarView(appState: AppState())
 }

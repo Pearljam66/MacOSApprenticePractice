@@ -29,7 +29,10 @@ struct GuessesView: View {
                         nextGuess = ""
                     }
                     .focused($entryFieldHasFocus)
-                    .onChange(of: game.gameStatus) {
+                    .onChange(of: game.id) {
+                        entryFieldHasFocus = true
+                    }
+                    .onAppear {
                         entryFieldHasFocus = true
                     }
             }
@@ -38,5 +41,5 @@ struct GuessesView: View {
 }
 
 #Preview {
-    GuessesView(game: .constant(Game()))
+    GuessesView(game: .constant(Game(id: 1)))
 }

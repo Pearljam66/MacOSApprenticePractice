@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var appState: AppState
+
     var body: some View {
         NavigationSplitView {
-            SidebarView()
+            SidebarView(appState: appState)
         } detail: {
-            GameView()
+            GameView(appState: appState)
         }
         .frame(minWidth: 1100, minHeight: 500)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(appState: AppState())
 }
