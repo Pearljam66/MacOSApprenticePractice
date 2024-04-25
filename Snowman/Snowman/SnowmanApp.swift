@@ -15,5 +15,14 @@ struct SnowmanApp: App {
         WindowGroup {
             ContentView(appState: appState)
         }
+
+        Settings {
+            SettingsView()
+        }
+
+        Window("Statistics", id: "stats") {
+            StatsView(games: appState.games)
+        }
+        .keyboardShortcut("t", modifiers: .command)
     }
 }

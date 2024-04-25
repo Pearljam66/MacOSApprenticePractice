@@ -5,10 +5,14 @@
 //  Created by Sarah Clark on 4/24/24.
 //
 
-import Foundation
+import SwiftUI
 
 struct Game: Identifiable {
     let id: Int
+
+    @AppStorage("minWordLength") var minWordLength = 4
+    @AppStorage("maxWordLength") var maxWordLength = 10
+    @AppStorage("useProperNouns") var useProperNouns = false
 
     var incorrectGuessCount = 0
     var statusText = "Enter a letter to start the game."
@@ -92,7 +96,14 @@ struct Game: Identifiable {
         let words = wordsList
             .components(separatedBy: .newlines)
             .filter { word in
-                word.count >= 4 && word.count <= 10
+                word.count >= minWordLength && word.count <= maxWordLength
+            }
+            .filter { word in
+                if useProperNouns {
+                    return true
+                }
+                let firstLetter = word[word.startIndex]
+                return !firstLetter.isUppercase
             }
 
         let word = words.randomElement() ?? "SNOWMAN"

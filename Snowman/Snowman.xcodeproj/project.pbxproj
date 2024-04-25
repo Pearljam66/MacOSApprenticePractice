@@ -20,6 +20,10 @@
 		26556B732BD9D47300745DE0 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B722BD9D47300745DE0 /* Letter.swift */; };
 		26556B752BD9E72100745DE0 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26556B742BD9E72100745DE0 /* words.txt */; };
 		26556B772BD9FC3200745DE0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B762BD9FC3200745DE0 /* AppState.swift */; };
+		26556B792BDA17AA00745DE0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B782BDA17AA00745DE0 /* SettingsView.swift */; };
+		26556B7C2BDA1BA300745DE0 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B7B2BDA1BA300745DE0 /* StatsView.swift */; };
+		26556B7E2BDA1BD900745DE0 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B7D2BDA1BD900745DE0 /* GameStats.swift */; };
+		26556B802BDA1C0800745DE0 /* WordStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26556B7F2BDA1C0800745DE0 /* WordStats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		26556B722BD9D47300745DE0 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		26556B742BD9E72100745DE0 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		26556B762BD9FC3200745DE0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		26556B782BDA17AA00745DE0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		26556B7B2BDA1BA300745DE0 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		26556B7D2BDA1BD900745DE0 /* GameStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
+		26556B7F2BDA1C0800745DE0 /* WordStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +99,13 @@
 		26556B642BD9BB1500745DE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				26556B7A2BDA1B8000745DE0 /* Statistics */,
 				26556B572BD2DB7F00745DE0 /* ContentView.swift */,
 				26556B672BD9BBCB00745DE0 /* GameView.swift */,
 				26556B6B2BD9C97200745DE0 /* GuessesView.swift */,
 				26556B692BD9C65600745DE0 /* LettersView.swift */,
 				26556B652BD9BB7300745DE0 /* SidebarView.swift */,
+				26556B782BDA17AA00745DE0 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +120,16 @@
 				26556B742BD9E72100745DE0 /* words.txt */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		26556B7A2BDA1B8000745DE0 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				26556B7D2BDA1BD900745DE0 /* GameStats.swift */,
+				26556B7B2BDA1BA300745DE0 /* StatsView.swift */,
+				26556B7F2BDA1C0800745DE0 /* WordStats.swift */,
+			);
+			path = Statistics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,13 +206,17 @@
 				26556B6C2BD9C97200745DE0 /* GuessesView.swift in Sources */,
 				26556B772BD9FC3200745DE0 /* AppState.swift in Sources */,
 				26556B582BD2DB7F00745DE0 /* ContentView.swift in Sources */,
+				26556B7E2BDA1BD900745DE0 /* GameStats.swift in Sources */,
 				26556B6A2BD9C65600745DE0 /* LettersView.swift in Sources */,
 				26556B732BD9D47300745DE0 /* Letter.swift in Sources */,
 				26556B6E2BD9D18E00745DE0 /* GameStatus.swift in Sources */,
+				26556B802BDA1C0800745DE0 /* WordStats.swift in Sources */,
 				26556B562BD2DB7F00745DE0 /* SnowmanApp.swift in Sources */,
 				26556B682BD9BBCB00745DE0 /* GameView.swift in Sources */,
+				26556B7C2BDA1BA300745DE0 /* StatsView.swift in Sources */,
 				26556B662BD9BB7300745DE0 /* SidebarView.swift in Sources */,
 				26556B712BD9D26200745DE0 /* Game.swift in Sources */,
+				26556B792BDA17AA00745DE0 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
