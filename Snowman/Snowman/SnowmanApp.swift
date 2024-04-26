@@ -15,6 +15,32 @@ struct SnowmanApp: App {
         WindowGroup {
             ContentView(appState: appState)
         }
+        .commands {
+            SidebarCommands()
+            ToolbarCommands()
+
+            CommandGroup(replacing: .newItem) {
+                Button("New Game") {
+                    appState.startNewGame()
+                }
+                .keyboardShortcut("n")
+            }
+
+            CommandGroup(replacing: .help) {
+                EmptyView()
+            }
+
+            CommandMenu("Game") {
+                Toggle("Boss Mode", isOn: $appState.bossMode)
+                    .keyboardShortcut("b")
+
+                Button("Different Word") {
+                    appState.getDifferentWord()
+                }
+                .keyboardShortcut("d")
+                .disabled(appState.gameHasStarted)
+            }
+        }
 
         Settings {
             SettingsView()

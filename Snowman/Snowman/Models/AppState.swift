@@ -15,6 +15,7 @@ class AppState: ObservableObject {
             selectGame(id: selectedID)
         }
     }
+    @Published var bossMode = false
 
     init() {
         let newGame = Game(id: 1)
@@ -43,5 +44,13 @@ class AppState: ObservableObject {
         if let gameLocation {
             gameIndex = gameLocation
         }
+    }
+
+    var gameHasStarted: Bool {
+        !games[gameIndex].guesses.isEmpty
+    }
+
+    func getDifferentWord() {
+        games[gameIndex].chooseNewWord()
     }
 }

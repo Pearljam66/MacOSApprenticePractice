@@ -111,6 +111,10 @@ struct Game: Identifiable {
         print(word)
         return word.uppercased()
     }
+
+    mutating func chooseNewWord() {
+        word = getRandomWord()
+    }
 }
 
 extension Game {
